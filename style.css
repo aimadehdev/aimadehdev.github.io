@@ -617,120 +617,7 @@ body {
   opacity: 1;
 }
 
-/* Dual Profile / Hybrid Section */
-.hybrid-showcase {
-  margin-bottom: 60px;
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(245, 158, 11, 0.05) 50%, rgba(16, 185, 129, 0.05) 100%);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 36px;
-  position: relative;
-  overflow: hidden;
-}
 
-.hybrid-grid {
-  display: grid;
-  grid-template-columns: 1fr 60px 1fr;
-  align-items: center;
-  gap: 20px;
-}
-
-.hybrid-pillar {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 24px;
-  position: relative;
-  z-index: 1;
-}
-
-.pillar-software {
-  border-top: 4px solid var(--sec-software);
-}
-
-.pillar-industry {
-  border-top: 4px solid var(--sec-electricity);
-}
-
-.pillar-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.pillar-icon {
-  font-size: 1.8rem;
-}
-
-.pillar-title {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--text-primary);
-}
-
-.pillar-items {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-}
-
-.pillar-items li {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.pillar-items li span.bullet {
-  color: var(--accent-cyan);
-  font-weight: bold;
-}
-
-.pillar-industry .pillar-items li span.bullet {
-  color: var(--sec-electricity);
-}
-
-.hybrid-connector {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-
-.connector-badge {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--gradient-accent);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  font-weight: 800;
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
-  animation: pulse-dot 2.5s infinite;
-}
-
-.hybrid-footer-summary {
-  margin-top: 24px;
-  text-align: center;
-  padding: 16px 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: var(--radius-md);
-  border: 1px dashed var(--border-color);
-  font-size: 0.98rem;
-  color: var(--text-secondary);
-}
-
-.hybrid-footer-summary strong {
-  color: var(--accent-cyan);
-}
 
 /* Skills Category Filters */
 .skills-tab-filters {
@@ -790,11 +677,12 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 26px 24px 28px;
   backdrop-filter: blur(10px);
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .skill-category-card:hover {
@@ -823,7 +711,7 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .cat-icon {
@@ -836,6 +724,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.35rem;
+  flex-shrink: 0;
 }
 
 .icon-amber {
@@ -854,37 +743,27 @@ body {
 }
 
 .cat-title {
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: var(--text-primary);
+  line-height: 1.3;
 }
 
 .cat-subtitle {
   font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
   font-weight: 600;
-}
-
-.company-audit-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-color);
-  font-size: 0.76rem;
-  color: var(--text-secondary);
-  margin-bottom: 16px;
-  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0;
 }
 
 .skills-pill-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
-  margin-top: auto;
+  gap: 8px;
+  align-content: flex-start;
+  align-items: center;
+  margin-top: 16px;
 }
 
 .skill-pill {
@@ -896,8 +775,11 @@ body {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+  white-space: nowrap;
   transition: all var(--transition-fast);
 }
 
@@ -1797,14 +1679,7 @@ body {
     order: -1;
   }
 
-  .hybrid-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
 
-  .hybrid-connector {
-    transform: rotate(90deg);
-  }
 
   .skills-categories {
     grid-template-columns: 1fr 1fr;
