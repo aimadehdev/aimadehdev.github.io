@@ -316,6 +316,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
+  // GeoStock 3D Details & Performance Toggle
+  // ==========================================
+  const geostockToggleBtn = document.getElementById('toggle-geostock-details');
+  const geostockPanel = document.getElementById('geostock-details-panel');
+
+  if (geostockToggleBtn && geostockPanel) {
+    geostockToggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = geostockPanel.classList.toggle('open');
+      geostockToggleBtn.classList.toggle('open', isOpen);
+      geostockToggleBtn.setAttribute('aria-expanded', isOpen);
+    });
+  }
+
+  // ==========================================
   // Scroll Reveal Animations
   // ==========================================
   const observerOptions = {
