@@ -1480,6 +1480,103 @@ body {
   font-family: monospace;
 }
 
+/* Project Media Preview & Links */
+.project-media-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background: #090d16;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.project-card:hover .project-media-img {
+  transform: scale(1.05);
+}
+
+.project-media-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(to top, var(--bg-card) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.project-footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.ms-store-btn {
+  background: rgba(0, 120, 215, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(0, 120, 215, 0.4);
+}
+
+.ms-store-btn:hover {
+  background: #0078d7;
+  color: #ffffff;
+  border-color: #0078d7;
+  box-shadow: 0 4px 14px rgba(0, 120, 215, 0.4);
+  transform: translateY(-2px);
+}
+
+.web-btn {
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+.web-btn:hover {
+  background: var(--gradient-accent);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+/* About contact button size refinement */
+.about-contact-btn-wrap {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-contact-btn {
+  max-width: 220px;
+  width: auto;
+  padding: 10px 22px;
+  font-size: 0.92rem;
+}
+
 /* Education Grid */
 .education-grid {
   display: grid;

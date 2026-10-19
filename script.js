@@ -211,15 +211,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // Timeline Order Toggle (Cronológico vs Reciente primero)
+  // Timeline Order Toggle (Reciente primero vs Cronológico)
   // ==========================================
   const orderToggleBtn = document.getElementById('order-toggle-btn');
   const orderLabel = document.getElementById('order-label');
-  let isChronological = true;
+  let isRecentFirst = true; // Por defecto: más reciente primero
 
   if (orderToggleBtn && itemsContainer) {
     orderToggleBtn.addEventListener('click', () => {
-      isChronological = !isChronological;
+      isRecentFirst = !isRecentFirst;
       
       const itemsArray = Array.from(document.querySelectorAll('.timeline-item'));
       itemsArray.reverse();
@@ -230,12 +230,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Refresh items reference
       timelineItems = document.querySelectorAll('.timeline-item');
 
-      if (isChronological) {
-        orderLabel.innerHTML = 'Cronológico (2014 &rarr; 2026)';
-        orderToggleBtn.setAttribute('title', 'Cambiar a: Más recientes primero');
+      if (isRecentFirst) {
+        orderLabel.innerHTML = 'Más recientes primero (2026 &rarr; 2014)';
+        orderToggleBtn.setAttribute('title', 'Cambiar a: Orden cronológico desde 2014');
       } else {
-        orderLabel.innerHTML = 'Recientes primero (2026 &rarr; 2014)';
-        orderToggleBtn.setAttribute('title', 'Cambiar a: Orden cronológico');
+        orderLabel.innerHTML = 'Cronológico antiguo (2014 &rarr; 2026)';
+        orderToggleBtn.setAttribute('title', 'Cambiar a: Más recientes primero');
       }
 
       setTimeout(updateTimelineTracker, 150);
