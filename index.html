@@ -954,47 +954,14 @@
                 <li>Renderizado 3D fluido y visualización interactiva con Three.js.</li>
               </ul>
 
-              <!-- Desplegable Interactivo de Rendimiento & Métricas de Alto Tráfico -->
-              <div class="project-metrics-dropdown-wrap">
-                <button type="button" class="project-details-toggle" id="toggle-geostock-details" aria-expanded="false">
-                  <span class="toggle-title-wrap">
-                    <span class="toggle-icon">⚡</span>
-                    <span class="toggle-label">Ver Rendimiento, Tráfico & Métricas Reales</span>
-                  </span>
-                  <span class="toggle-arrow">▼</span>
+              <!-- Botón Lanzador de Modal: Rendimiento & Métricas Reales -->
+              <div class="project-modal-action-wrap">
+                <button type="button" class="btn-open-metrics-modal" id="open-geostock-modal" aria-haspopup="dialog" aria-controls="geostock-metrics-modal">
+                  <span class="btn-modal-icon">⚡</span>
+                  <span class="btn-modal-text">Ver Rendimiento, Tráfico & Métricas Reales</span>
+                  <span class="btn-modal-chip">Modal en Vivo</span>
                 </button>
-                <div class="project-details-panel" id="geostock-details-panel">
-                  <div class="metrics-stat-grid">
-                    <div class="metric-stat-item">
-                      <div class="metric-stat-num">+5.000</div>
-                      <div class="metric-stat-title">Noticias / Día Ingeridas</div>
-                      <div class="metric-stat-desc">Ingesta masiva y clasificación asíncrona de fuentes mundiales 24/7, diseñada para absorber picos repentinos de tráfico durante eventos geopolíticos críticos sin colapso.</div>
-                    </div>
-                    <div class="metric-stat-item">
-                      <div class="metric-stat-num">+30.000</div>
-                      <div class="metric-stat-title">Peticiones / Día de Bots IA</div>
-                      <div class="metric-stat-desc">Tráfico diario continuo recibido de bots y agentes autónomos de Inteligencia Artificial <em>(no son los de entrenamiento)</em> que consumen el feed semántico en tiempo real.</div>
-                    </div>
-                    <div class="metric-stat-item">
-                      <div class="metric-stat-num">95+</div>
-                      <div class="metric-stat-title">Google PageSpeed Insights</div>
-                      <div class="metric-stat-desc">Métricas sobresalientes en Core Web Vitals y tiempos de carga instantáneos a pesar de renderizar un globo terráqueo 3D interactivo con Three.js y shaders WebGL.</div>
-                    </div>
-                    <div class="metric-stat-item">
-                      <div class="metric-stat-num">Top SEO</div>
-                      <div class="metric-stat-title">Indexación & Google Discover</div>
-                      <div class="metric-stat-desc">Excelente posicionamiento orgánico en Google News y Google Discover gracias a sitemaps dinámicos, metadatos estructurados y arquitectura optimizada para rastreo.</div>
-                    </div>
-                  </div>
-                  <div class="metrics-deep-dive">
-                    <div class="deep-dive-badge">Arquitectura Subyacente</div>
-                    <p>
-                      Para procesar tal volumen sin caídas ni sobrecostes en infraestructura, implementé un backend asíncrono con <strong>FastAPI</strong>, persistencia optimizada en <strong>MongoDB</strong>, caché en memoria y contenedores <strong>Docker</strong>, asegurando una respuesta inmediata y estabilidad 24/7.
-                    </p>
-                  </div>
-                </div>
               </div>
-
               <div class="project-tags">
                 <span class="project-tag">Python</span>
                 <span class="project-tag">FastAPI</span>
@@ -1316,6 +1283,107 @@
       </p>
     </div>
   </footer>
+
+    <!-- Modal Popup: Rendimiento & Métricas Reales de GeoStock 3D -->
+  <div class="site-modal-overlay" id="geostock-metrics-modal" role="dialog" aria-modal="true" aria-labelledby="modal-metrics-title" aria-hidden="true">
+    <div class="site-modal-container">
+      <div class="site-modal-dialog spotlight-card">
+        
+        <!-- Header del Modal -->
+        <div class="site-modal-header">
+          <div class="modal-header-badge-wrap">
+            <span class="modal-system-badge">● Sistema en Producción</span>
+            <span class="modal-brand-tag">geostock3d.com</span>
+          </div>
+          <h2 class="site-modal-title" id="modal-metrics-title">
+            Métricas Reales, Tráfico & Arquitectura de Alta Carga
+          </h2>
+          <p class="site-modal-subtitle">
+            Auditoría técnica del rendimiento, concurrencia de rastreadores y comportamiento del sistema bajo picos de demanda.
+          </p>
+          <button type="button" class="site-modal-close" id="close-geostock-modal" aria-label="Cerrar modal">&times;</button>
+        </div>
+
+        <!-- Cuerpo del Modal -->
+        <div class="site-modal-body">
+          <div class="modal-stats-grid">
+            
+            <div class="modal-stat-card">
+              <div class="modal-stat-header">
+                <span class="modal-stat-icon">📰</span>
+                <span class="modal-stat-pill">+5.000 / día</span>
+              </div>
+              <div class="modal-stat-number">+5.000</div>
+              <div class="modal-stat-label">Noticias Procesadas al Día</div>
+              <p class="modal-stat-desc">
+                Ingesta masiva y clasificación asíncrona de fuentes mundiales 24/7. Diseñado para absorber <strong>picos repentinos de tráfico</strong> durante eventos geopolíticos críticos y noticias de última hora sin caídas ni degradación de servicio.
+              </p>
+            </div>
+
+            <div class="modal-stat-card">
+              <div class="modal-stat-header">
+                <span class="modal-stat-icon">🤖</span>
+                <span class="modal-stat-pill">+30.000 / día</span>
+              </div>
+              <div class="modal-stat-number">+30.000</div>
+              <div class="modal-stat-label">Peticiones Diarias por Bots de IA</div>
+              <p class="modal-stat-desc">
+                Tráfico diario continuo recibido por bots y agentes autónomos de Inteligencia Artificial <em>(no son los de entrenamiento)</em>, como motores de respuesta y asistentes semánticos que consultan la plataforma en tiempo real.
+              </p>
+            </div>
+
+            <div class="modal-stat-card">
+              <div class="modal-stat-header">
+                <span class="modal-stat-icon">🚀</span>
+                <span class="modal-stat-pill">PageSpeed Top</span>
+              </div>
+              <div class="modal-stat-number">95+</div>
+              <div class="modal-stat-label">Google PageSpeed Insights</div>
+              <p class="modal-stat-desc">
+                Resultados y métricas sobresalientes en Core Web Vitals (LCP, FID, CLS). Máxima fluidez y optimización de carga a pesar del renderizado en tiempo real de un globo terráqueo 3D interactivo con Three.js y WebGL.
+              </p>
+            </div>
+
+            <div class="modal-stat-card">
+              <div class="modal-stat-header">
+                <span class="modal-stat-icon">📈</span>
+                <span class="modal-stat-pill">SEO & Discover</span>
+              </div>
+              <div class="modal-stat-number">Top SEO</div>
+              <div class="modal-stat-label">Indexación & Posicionamiento</div>
+              <p class="modal-stat-desc">
+                Excelente posicionamiento orgánico en Google News y Google Discover gracias a sitemaps dinámicos actualizados al minuto, datos estructurados Schema.org y una arquitectura semántica optimizada para rastreo.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Bloque de Arquitectura Subyacente -->
+          <div class="modal-architecture-box">
+            <div class="modal-arch-badge">
+              <span class="arch-pulse-dot"></span>
+              <span>Arquitectura Subyacente &middot; Eficiencia Extrema</span>
+            </div>
+            <p class="modal-arch-text">
+              Para soportar este volumen diario y absorber picos de alta demanda sin sobrecostes de infraestructura en la nube, la plataforma implementa una arquitectura desacoplada: scraping concurrente asíncrono con <strong>FastAPI (Python)</strong>, almacenamiento y agregaciones optimizadas en <strong>MongoDB</strong>, caché en memoria intermedia y orquestación contenerizada con <strong>Docker</strong>, asegurando una disponibilidad de 99.9% y latencias mínimas de respuesta.
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer del Modal -->
+        <div class="site-modal-footer">
+          <a href="https://geostock3d.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-action-btn">
+            <span>Visitar Web Oficial (geostock3d.com)</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+          <button type="button" class="btn btn-secondary" id="dismiss-geostock-modal">
+            <span>Entendido, cerrar</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

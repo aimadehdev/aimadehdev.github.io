@@ -316,19 +316,62 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // GeoStock 3D Details & Performance Toggle
+  // GeoStock 3D Performance Modal
   // ==========================================
-  const geostockToggleBtn = document.getElementById('toggle-geostock-details');
-  const geostockPanel = document.getElementById('geostock-details-panel');
+  const openModalBtn = document.getElementById('open-geostock-modal');
+  const modalOverlay = document.getElementById('geostock-metrics-modal');
+  const closeModalBtn = document.getElementById('close-geostock-modal');
+  const dismissModalBtn = document.getElementById('dismiss-geostock-modal');
 
-  if (geostockToggleBtn && geostockPanel) {
-    geostockToggleBtn.addEventListener('click', (e) => {
+  function openMetricsModal() {
+    if (!modalOverlay) return;
+    modalOverlay.classList.add('active');
+    modalOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMetricsModal() {
+    if (!modalOverlay) return;
+    modalOverlay.classList.remove('active');
+    modalOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (openModalBtn) {
+    openModalBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const isOpen = geostockPanel.classList.toggle('open');
-      geostockToggleBtn.classList.toggle('open', isOpen);
-      geostockToggleBtn.setAttribute('aria-expanded', isOpen);
+      openMetricsModal();
     });
   }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMetricsModal();
+    });
+  }
+
+  if (dismissModalBtn) {
+    dismissModalBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMetricsModal();
+    });
+  }
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      // Close only if clicked on backdrop overlay directly
+      if (e.target === modalOverlay) {
+        closeMetricsModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
+      closeMetricsModal();
+    }
+  });
 
   // ==========================================
   // Scroll Reveal Animations
