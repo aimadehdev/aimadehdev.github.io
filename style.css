@@ -1385,22 +1385,17 @@ body {
   text-align: left;
 }
 
-.btn-modal-chip {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  background: rgba(6, 182, 212, 0.2);
+.btn-modal-arrow {
+  font-size: 1.15rem;
   color: var(--accent-cyan);
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(6, 182, 212, 0.3);
-  transition: all var(--transition-fast);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+  line-height: 1;
+  display: inline-block;
 }
 
-.btn-open-metrics-modal:hover .btn-modal-chip {
-  background: var(--accent-cyan);
-  color: #030712;
+.btn-open-metrics-modal:hover .btn-modal-arrow {
+  transform: translateX(4px);
+  color: #ffffff;
 }
 
 /* ==========================================================================
